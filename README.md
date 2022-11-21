@@ -17,9 +17,13 @@ sdi      8:128  0  512M  0 disk
 
 
 [root@zfs ~]# zpool create otus1 mirror /dev/sdb /dev/sdc
+
 [root@zfs ~]# zpool create otus2 mirror /dev/sdd /dev/sde
+
 [root@zfs ~]# zpool create otus3 mirror /dev/sdf /dev/sdg
+
 [root@zfs ~]# zpool create otus4 mirror /dev/sdh /dev/sdi
+
 
 [root@zfs ~]# zpool list
 NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
