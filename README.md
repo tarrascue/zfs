@@ -1,6 +1,7 @@
 # zfs 
 1
 [root@zfs ~]# lsblk
+
 NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 
 sda      8:0    0   40G  0 disk 
