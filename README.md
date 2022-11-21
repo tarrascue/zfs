@@ -1,6 +1,7 @@
 # zfs 
 1
 [root@zfs ~]# lsblk
+
 NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 sda      8:0    0   40G  0 disk 
 `-sda1   8:1    0   40G  0 part /
@@ -12,16 +13,19 @@ sdf      8:80   0  512M  0 disk
 sdg      8:96   0  512M  0 disk 
 sdh      8:112  0  512M  0 disk 
 sdi      8:128  0  512M  0 disk 
+
 [root@zfs ~]# zpool create otus1 mirror /dev/sdb /dev/sdc
 [root@zfs ~]# zpool create otus2 mirror /dev/sdd /dev/sde
 [root@zfs ~]# zpool create otus3 mirror /dev/sdf /dev/sdg
 [root@zfs ~]# zpool create otus4 mirror /dev/sdh /dev/sdi
+
 [root@zfs ~]# zpool list
 NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
 otus1   480M   106K   480M        -         -     0%     0%  1.00x    ONLINE  -
 otus2   480M   106K   480M        -         -     0%     0%  1.00x    ONLINE  -
 otus3   480M   106K   480M        -         -     0%     0%  1.00x    ONLINE  -
 otus4   480M   111K   480M        -         -     0%     0%  1.00x    ONLINE  -
+
 [root@zfs ~]# zpool status
   pool: otus1
  state: ONLINE
