@@ -26,6 +26,7 @@ sdi      8:128  0  512M  0 disk
 
 
 [root@zfs ~]# zpool list
+
 NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
 otus1   480M   106K   480M        -         -     0%     0%  1.00x    ONLINE  -
 otus2   480M   106K   480M        -         -     0%     0%  1.00x    ONLINE  -
